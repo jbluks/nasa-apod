@@ -1,0 +1,30 @@
+{
+  "name": "axios-demo",
+  "homepage": "http://jbluks.github.io/nasa-apod",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "gh-pages": "^1.1.0",
+    "git-scripts": "^0.2.1",
+    "surge": "^0.20.1"
+  },
+  "git": {
+    "scripts": {
+      "pre-push": "surge --project ./ --domain jbluks.surge.sh"
+    }
+  }
+}
